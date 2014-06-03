@@ -1,11 +1,11 @@
 #!/bin/bash
 #set -vx
 
-i=0
-mkdir ~/Desktop/ani
+ 
 bgin(){
 	i=0
 	cd ~/Desktop/ani
+	rm *.jpeg
 	rm *.jpeg
 	}
 
@@ -28,6 +28,7 @@ send(){
 	echo "Your Image is at: http://server$M"
 	}
 
+bgin()
 
 while true; do
 #clear
@@ -51,4 +52,3 @@ read -rsn1 input
 		exit
 	fi
 done
-
