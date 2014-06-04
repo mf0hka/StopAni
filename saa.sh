@@ -1,7 +1,9 @@
 #!/bin/bash
 #set -vx
-
- 
+#PObjective: Capture frames and assemble an animation.
+#keys are P5T6
+i=0
+mkdir ~/Desktop/ani
 bgin(){
 	i=0
 	cd ~/Desktop/ani
@@ -11,6 +13,7 @@ bgin(){
 
 capture(){
 	cd ~/Desktop/ani
+
 	streamer -c /dev/video0 -s 800x600 -o outfile$i.jpeg
 	let i++
 	}	
@@ -28,23 +31,22 @@ send(){
 	echo "Your Image is at: http://server$M"
 	}
 
-bgin()
 
 while true; do
 #clear
 echo "s = capture, w = start over, a= play, d = send"
 read -rsn1 input
 
-	if [ "$input" = "a" ]; then 
+	if [ "$input" = "t" ]; then 
 		play
 
-		elif [ "$input" = "s" ]; then
+		elif [ "$input" = "5" ]; then
 		capture
 
-		elif [ "$input" = "d" ]; then 
+		elif [ "$input" = "p" ]; then 
 		send
 
-		elif [ "$input" = "w" ]; then
+		elif [ "$input" = "6" ]; then
 		bgin
 
 		else
