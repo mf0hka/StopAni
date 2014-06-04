@@ -30,7 +30,7 @@ play(){
 	M=$(date).gif
 	convert	-delay 20 -loop 0 *.jpeg $M
 	rm *.jpeg
-	animate -loop 0 $M
+	((sleep 10 && killall animate)&); animate -loop 0 $M
 	}
 	
 send(){
