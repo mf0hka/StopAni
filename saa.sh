@@ -1,6 +1,13 @@
 #!/bin/bash
 #set -vx
-#PObjective: Capture frames and assemble an animation.
+# Hardware: Modified keyboard for inputs, & Camera
+#
+# Software: streamer --from xawtv, and imagemagic
+#
+# Objective: capture frames and assemble an animation
+# 
+  
+
 #keys are P5T6
 i=0
 mkdir ~/Desktop/ani
